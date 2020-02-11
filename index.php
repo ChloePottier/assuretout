@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Identification</title>
+    <link rel="stylesheet" href="style.css">
+    <title>Assuretout - Identification</title>
 </head>
 <body>
 <p style="text-align: center;">Merci de vous identifier pour accéder à notre site</p>

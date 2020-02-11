@@ -1,0 +1,14 @@
+nav ul li a{text-decoration: none;padding-left: 10px;}
+nav ul{display: flex;}
+nav ul li{list-style: none;}
+.row{display: flex; flex-direction: row; padding-bottom: 5px;padding-top: 5px;border-bottom: solid 1px #000;}
+.civilite,.nom_client,.prenom_client,.adresse,.tel_client,.marque_vehicule,.genre_vehicule,.type_contrat{padding-right: 5px; }
+.civilite{width: 55px;}
+.nom_client{width:100px;}
+.prenom_client{width: 120px;}
+.adresse{width: 300px;}
+.tel_client{width: 150px;}
+.marque_vehicule{width: 150px;}
+.genre_vehicule{width: 150px;}
+.type_contrat{width: 120px;}
+.bold{font-weight: 600;}
