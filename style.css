@@ -1,7 +1,8 @@
 nav ul li a{text-decoration: none;padding-left: 10px;}
 nav ul{display: flex;}
 nav ul li{list-style: none;}
-.row{display: flex; flex-direction: row; padding-bottom: 5px;padding-top: 5px;border-bottom: solid 1px #000;}
+.row{display: flex; flex-direction: row; padding-bottom: 5px;padding-top: 5px;}
+.border-bottom{border-bottom: solid 1px #000;}
 .civilite,.nom_client,.prenom_client,.adresse,.tel_client,.marque_vehicule,.genre_vehicule,.type_contrat{padding-right: 5px; }
 .civilite{width: 55px;}
 .nom_client{width:100px;}
@@ -11,4 +12,9 @@ nav ul li{list-style: none;}
 .marque_vehicule{width: 150px;}
 .genre_vehicule{width: 150px;}
 .type_contrat{width: 120px;}
+.modifier,.supprimer{width:80px;}
 .bold{font-weight: 600;}
+button{margin-left: 20px;}
+.form-modif{display: flex; flex-direction: column;}
+.btn-modif{width: 15%; margin-left: 0;}
+.form-modif-clients input, .form-modif-clients select{width:300px; display: flex; flex-direction: column;}
