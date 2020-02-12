@@ -108,7 +108,6 @@ if(isset($_SESSION['login']) && isset($_SESSION['pwd'])){
         } 
         if(!empty($_POST['type'])){
             $idContrats = $_POST['type'];
-            // $tab = array('id_contrats' => $idContrats);
             $sqlContratsClient = "UPDATE vehicules SET id_contrats = '$idContrats' WHERE id_client =".$modifClient." ";
             $reqContratsClient = $dbh->query($sqlContratsClient);
             if($sqlContratsClient == true){
@@ -116,17 +115,22 @@ if(isset($_SESSION['login']) && isset($_SESSION['pwd'])){
             } else {
                 echo"Modification impossible, veuillez vérifier tous les champs";
             }
-
         }
-
     } 
     else if(isset($_GET['suppr_client'])){
         $supprClient = $_GET['suppr_client'];
+        $sqlSupprVehicule = "DELETE FROM vehicules WHERE id_client = $supprClient";
+        $reqSupprVehicule = $dbh->query($sqlSupprVehicule);
+        $sqlSupprClient ="DELETE FROM clients WHERE id = $supprClient";
+        $reqSupprClient = $dbh->query($sqlSupprClient);
+        if($sqlSupprClient == true){
+            header("Location: clients.php");
+        } else {
+            echo"Suppression impossible";
+        }
     };
 };
-// else{
-//     header("Location: index.php"); 
-// }
+
 ?>
 </body>
 </html>

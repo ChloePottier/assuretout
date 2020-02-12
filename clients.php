@@ -24,6 +24,9 @@ session_start ();
             print "Erreur !: " . $e->getMessage() . "<br/>";
             die();
         }
+        ?>
+        <div><a href="ajout-client.php"><img src="img/ajouter.png" alt="ajouter" width="20px" height="20px"></a> Ajouter un client</div>
+        <?php
         //la requête
         $sqlClients = "SELECT * FROM clients
             INNER JOIN vehicules ON vehicules.id_client = clients.id
@@ -32,10 +35,9 @@ session_start ();
         $reqClients = $dbh->query($sqlClients);?>
         <div class="row bold border-bottom"><div class='civilite'>Civilité</div><div class='nom_client'>Nom du client</div><div class='prenom_client'>Prénom du client</div><div class='adresse'>Adresse</div><div class='tel_client'>Téléphone</div><div class='marque_vehicule'>Marque du véhicule</div><div class='genre_vehicule'>Genre du véhicule</div><div class='type_contrat'>Type de contrat</div><div class='modifier'>modifier</div><div class='supprimer'>supprimer</div></div>
         <?php while($reqClientsFinal=$reqClients->fetch(PDO::FETCH_ASSOC)){
-            echo "<div class='row  border-bottom'><div class='civilite'>".$reqClientsFinal['titre_de_civilite']."</div> <div class='nom_client'>".$reqClientsFinal['nom']."</div> <div class='prenom_client'>".$reqClientsFinal['prenom']."</div> <div class='adresse'>".$reqClientsFinal['adresse']."</div> <div class='tel_client'>".$reqClientsFinal['tel']."</div> <div class='marque_vehicule'>".$reqClientsFinal['marque']."</div> <div class='genre_vehicule'>".$reqClientsFinal['genre']."</div> <div class='type_contrat'>".$reqClientsFinal['type']."</div><div class='modifier'><a href='functions.php?modif_client=".$reqClientsFinal['id_client']."'><img src='img/editer.png' alt='modifier' width='20px' height='20px'/></a></div><div class='supprimer'><a href='functions.php?suppr_client=".$reqClientsFinal['id_client']."'><img src='img/effacer.png' alt='supprimer' width='20px' height='20px'/></a></div>";
+            echo "<div class='row  border-bottom'><div class='civilite'>".$reqClientsFinal['titre_de_civilite']."</div> <div class='nom_client'>".$reqClientsFinal['nom']."</div> <div class='prenom_client'>".$reqClientsFinal['prenom']."</div> <div class='adresse'>".$reqClientsFinal['adresse']."</div> <div class='tel_client'>".$reqClientsFinal['tel']."</div> <div class='marque_vehicule'>".$reqClientsFinal['marque']."</div> <div class='genre_vehicule'>".$reqClientsFinal['genre']."</div> <div class='type_contrat'>".$reqClientsFinal['type']."</div><div class='modifier'><a href='functions.php?modif_client=".$reqClientsFinal['id_client']."'><img src='img/editer.png' alt='modifier' width='20px' height='20px'/></a></div><div class='supprimer'><a href='functions.php?suppr_client=".$reqClientsFinal['id_client']."'><img src='img/effacer.png' alt='supprimer' width='20px' height='20px'/></a></div></div>";
         };
-    
-    
+
     
     
     
