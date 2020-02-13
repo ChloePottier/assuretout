@@ -1,10 +1,5 @@
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>Assuretout - Listing des clients </title>
+<?php include('doctype.php')?>
+    <title>Assuretout - Ajouter un client et un véhicule</title>
 </head>
 <body>
     <?php 
@@ -112,13 +107,11 @@ session_start ();
             </select>
             <button type='submit' value='submit' name='ajouter-vehicule' class='btn-vehicule'>Ajouter le véhicule</button>
         </form>
-                    
-
+                
 <?php
-
-
-
-    }
+} else {
+    header("Location:index.php");
+}
 ?>
 </body>
 </html>

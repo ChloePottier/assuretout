@@ -1,9 +1,4 @@
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+<?php include('doctype.php')?>
     <title>Assuretout - Modification suppression client</title>
 </head>
 <body>
@@ -134,7 +129,10 @@ if(isset($_SESSION['login']) && isset($_SESSION['pwd'])){
             echo"Suppression impossible";
         }
     };
-};
+} else {
+    header("Location:index.php");
+
+}
 
 ?>
 </body>

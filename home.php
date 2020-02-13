@@ -1,10 +1,4 @@
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="style.css">
+<?php include('doctype.php')?>
     <title>Assuretout  - accueil</title>
 </head>
 <body>
@@ -14,7 +8,7 @@ session_start();
 include('menu.php');
 //si la session existe alors afficher la page sinon retour vers la page de connection
 if(isset($_SESSION['login']) && isset($_SESSION['pwd'])){
-    echo "<div >Bienvenue ".$_SESSION['login']." sur notre site Assuretout !</div>
+    echo "<div class='text-center padding-top-40'>Bienvenue ".$_SESSION['login']." sur notre site Assuretout !</div>
 ";?>
 
 <?php

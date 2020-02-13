@@ -1,7 +1,13 @@
-nav ul li a{text-decoration: none;padding-left: 10px;}
+body{margin: 0; color: #000; font-family: Arial, Helvetica, sans-serif;}
+.menu{box-shadow: 0px 5px 5px #d2d2d2;}
+a{text-decoration: none; color: #000;}
+a:hover{color: #00ab7d;}
+button{background: #00ab7d; color: #000; border: none; padding: 5px;}
+button:hover{background: blanchedalmond; color:#00ab7d; border: none; padding: 5px;}
+nav ul li a{padding-left: 10px;}
 nav ul{display: flex;}
 nav ul li{list-style: none;}
-.row{display: flex; flex-direction: row; padding-bottom: 5px;padding-top: 5px; max-width: 1000px;}
+.row{ display: flex; flex-direction: row; padding-bottom: 5px;padding-top: 5px; max-width: 1000px;}
 .border-bottom{border-bottom: solid 1px #000;}
 .civilite,.nom_client,.prenom_client,.adresse,.tel_client,.marque_vehicule,.genre_vehicule,.type_contrat{padding-right: 5px; }
 .civilite{width: 55px;}
@@ -19,3 +25,12 @@ button{margin-left: 20px;}
 .btn-modif{width: 15%; margin-left: 0;}
 .form-modif-clients input, .form-modif-clients select,.form-ajout-clients,.form-ajout-vehicule{width:300px; display: flex; flex-direction: column;}
 .btn-vehicule,.btn-client{width:auto;}
+.d-flex{display:flex;}
+.justify-content-end{justify-content: end;}
+.justify-content-start{justify-content: start;}
+.justify-content-between{justify-content: space-between;}
+.align-items-end{align-items: flex-end;}
+.align-items-center{align-items: center;}
+.text-center{text-align: center;}
+.padding-right-40{padding-right: 40px;}
+.padding-top-40{padding-top: 40px;}
