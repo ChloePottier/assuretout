@@ -17,4 +17,5 @@ nav ul li{list-style: none;}
 button{margin-left: 20px;}
 .form-modif,.form-ajout-clients{display: flex; flex-direction: column;}
 .btn-modif{width: 15%; margin-left: 0;}
-.form-modif-clients input, .form-modif-clients select{width:300px; display: flex; flex-direction: column;}
+.form-modif-clients input, .form-modif-clients select,.form-ajout-clients,.form-ajout-vehicule{width:300px; display: flex; flex-direction: column;}
+.btn-vehicule,.btn-client{width:auto;}

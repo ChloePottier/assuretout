@@ -31,6 +31,11 @@
 //         echo $reqClientsFinal['titre_de_civilite']." ".$reqClientsFinal['nom']." ".$reqClientsFinal['prenom']." ".$reqClientsFinal['adresse']." ".$reqClientsFinal['tel']." ".$reqClientsFinal['marque']." ".$reqClientsFinal['genre']." ".$reqClientsFinal['type'];
 //     };
 // };
+function sql_client(){
+    $sqlClients = "SELECT * FROM clients
+    INNER JOIN vehicules ON vehicules.id_client = clients.id
+    JOIN contrats ON contrats.id = vehicules.id_contrats"; 
+}
 session_start ();
 if(isset($_SESSION['login']) && isset($_SESSION['pwd'])){
     include('menu.php');

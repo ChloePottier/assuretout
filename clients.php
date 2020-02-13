@@ -25,12 +25,13 @@ session_start ();
             die();
         }
         ?>
-        <div><a href="ajout-client.php"><img src="img/ajouter.png" alt="ajouter" width="20px" height="20px"></a> Ajouter un client</div>
+        <div><a href="ajout-client.php"><img src="img/ajouter.png" alt="ajouter" width="20px" height="20px"> Ajouter un client ou un véhicule</a></div>
         <?php
         //la requête
         $sqlClients = "SELECT * FROM clients
             INNER JOIN vehicules ON vehicules.id_client = clients.id
             JOIN contrats ON contrats.id = vehicules.id_contrats"; 
+        // sql_client('functions.php');
         $dbh->query($sqlClients);
         $reqClients = $dbh->query($sqlClients);?>
         <div class="row bold border-bottom"><div class='civilite'>Civilité</div><div class='nom_client'>Nom du client</div><div class='prenom_client'>Prénom du client</div><div class='adresse'>Adresse</div><div class='tel_client'>Téléphone</div><div class='marque_vehicule'>Marque du véhicule</div><div class='genre_vehicule'>Genre du véhicule</div><div class='type_contrat'>Type de contrat</div><div class='modifier'>modifier</div><div class='supprimer'>supprimer</div></div>
