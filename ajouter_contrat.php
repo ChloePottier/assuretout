@@ -21,12 +21,15 @@ session_start ();
         }
 
         ?>
-        <!-- formulaire ajout contrat -->
-        <form action='' method='post' class='form-ajout-contrat'>
-            <input type='text' name='type' placeholder='Nom du contrat'>
-            <input type='text' name='tarif' placeholder='Tarif du contrat'>
-            <button type='submit' value='ajouter'>Ajouter un contrat</button>
-        </form>
+        <div class="container">
+            <h1>Ajouter un type de contrat</h1>
+            <!-- formulaire ajout contrat -->
+            <form action='' method='post' class='form-ajout-contrat mx-auto d-flex justify-content-center'>
+                <input type='text' name='type' placeholder='Nom du contrat' class=''>
+                <input type='text' name='tarif' placeholder='Tarif du contrat'>
+                <button type='submit' value='ajouter'>Ajouter un contrat</button>
+            </form>
+        </div>
         <?php
 
         if(isset($_POST['type'])){

@@ -6,7 +6,7 @@ a{text-decoration: none; color: #000; }
 a:hover{color: #00ab7d;}
 button{background: #00ab7d; color: #fff; border: none; padding: 5px; font-weight: 600;}
 button:hover{background: #beffed; color:#000; border: none; padding: 5px;}
-nav ul li a{padding-left: 10px;}
+nav ul li a{padding-left: 20px;}
 nav ul{display: flex;}
 nav ul li{list-style: none;}
 .row{ display: flex; flex-direction: row; padding-bottom: 5px;padding-top: 5px; }
@@ -22,7 +22,7 @@ nav ul li{list-style: none;}
 .type_contrat{width: 120px;}
 .modifier,.supprimer{width:100px; display: flex; justify-content: center; align-items: center;}
 .bold{font-weight: 600;}
-button{margin-left: 20px;}
+button, .form-ajout-contrat input{margin-left: 20px;}
 form{margin-top: 20px;}
 input, select, label{margin-top:5px;}
 .form-modif,.form-ajout-clients{display: flex; flex-direction: column; }

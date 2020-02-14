@@ -36,7 +36,7 @@ if(isset($_SESSION['login']) && isset($_SESSION['pwd'])){
 
     }
     echo "</table>";   
-    echo "<a href='ajouter_contrat.php' class=''><img src='img/ajouter.png' alt='ajouter' width='20px' height='20px'> Ajouter un contrat</a>";
+    echo "<div class='d-flex padding-top-40'><a href='ajouter_contrat.php' class='mx-auto'><img src='img/ajouter.png' alt='ajouter' width='20px' height='20px'> Ajouter un contrat</a></div>";
   } else {
 		header("Location:index.php");
 	}
