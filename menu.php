@@ -1,7 +1,7 @@
 
 <div class="menu d-flex justify-content-between">
     <nav class="d-flex ">
-        <ul>
+        <ul class="">
             <li><a href="home.php">Accueil</a></li>
             <li><a href="contrats.php">Les contrats</a></li>
             <li><a href="clients.php">Les clients</a></li>

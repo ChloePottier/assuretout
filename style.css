@@ -31,6 +31,7 @@ input, select, label{margin-top:5px;}
 .form-modif-clients input, .form-modif-clients select,.form-ajout-clients,.form-ajout-vehicule{width:300px; display: flex; flex-direction: column; }
 .btn-vehicule,.btn-client{width: 100%; margin-top: 5px;}
 .d-flex{display:flex;}
+.justify-content-center{justify-content: center;}
 .justify-content-end{justify-content: end;}
 .justify-content-start{justify-content: start;}
 .justify-content-between{justify-content: space-between;}

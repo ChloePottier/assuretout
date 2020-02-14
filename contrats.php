@@ -18,7 +18,6 @@ if(isset($_SESSION['login']) && isset($_SESSION['pwd'])){
       print "Erreur !: " . $e->getMessage() . "<br/>";
       die();
   }
-
   $sql="SELECT * FROM  contrats";
   $req = $dbh->query($sql);
 
@@ -37,7 +36,7 @@ if(isset($_SESSION['login']) && isset($_SESSION['pwd'])){
 
     }
     echo "</table>";   
-    echo "<a href='ajouter_contrat.php' class='mx-auto'><img src='img/ajouter.png' alt='ajouter' width='20px' height='20px'> Ajouter un contrat</a>";
+    echo "<a href='ajouter_contrat.php' class=''><img src='img/ajouter.png' alt='ajouter' width='20px' height='20px'> Ajouter un contrat</a>";
   } else {
 		header("Location:index.php");
 	}

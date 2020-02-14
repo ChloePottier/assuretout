@@ -19,24 +19,25 @@ session_start ();
             print "Erreur !: " . $e->getMessage() . "<br/>";
             die();
         }
-   
-    
 
-    echo "<form action='' method='post'>";
-    echo "<input type='text' name='type' value=''>";
-    echo "<input type='text' name='tarif' value=''>";
-    echo "<input type='submit' value='ajouer'>";
-    echo "</form>";
+        ?>
+        <!-- formulaire ajout contrat -->
+        <form action='' method='post' class='form-ajout-contrat'>
+            <input type='text' name='type' placeholder='Nom du contrat'>
+            <input type='text' name='tarif' placeholder='Tarif du contrat'>
+            <button type='submit' value='ajouter'>Ajouter un contrat</button>
+        </form>
+        <?php
 
-if(isset($_POST['type'])){
+        if(isset($_POST['type'])){
 
-    $ajout="INSERT INTO contrats (type, tarif) VALUES ('".$_POST['type']."' , '".$_POST['tarif']."')";
-	$stmt = $dbh->prepare($ajout);
-    $stmt->execute();
-}
-    if(isset($_POST['type'])) {
-     header("Location:contrats.php");
-    }
+            $ajout="INSERT INTO contrats (type, tarif) VALUES ('".$_POST['type']."' , '".$_POST['tarif']."')";
+            $stmt = $dbh->prepare($ajout);
+            $stmt->execute();
+        }
+            if(isset($_POST['type'])) {
+            header("Location:contrats.php");
+            }
 } else {
     header("Location:index.php");
 
