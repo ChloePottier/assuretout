@@ -2,7 +2,6 @@
     <title>Assuretout - Modification suppression client</title>
 </head>
 <body>
-    
 
 <?php
 // function listing_clients(){
@@ -34,6 +33,7 @@ function sql_client(){
 session_start ();
 if(isset($_SESSION['login']) && isset($_SESSION['pwd'])){
     include('menu.php');
+    echo"<h1>Modification fiche client</h1>";
     $userBdd ='root';
     $pass ='';
     //Connexion à la BDD en PDO
@@ -55,15 +55,15 @@ if(isset($_SESSION['login']) && isset($_SESSION['pwd'])){
         $sqlContrats ="SELECT * FROM contrats";
         $reqContrats = $dbh->query($sqlContrats);
         while($resModifClient=$reqModifClient->fetch(PDO::FETCH_ASSOC)){
-            echo "<form method='POST' action='#' class='form-modif-clients'>
-                    <input name='civilite' type='text' value='".$resModifClient['titre_de_civilite']."'/> 
-                    <input name='nom' type='text' value='".$resModifClient['nom']."'/> 
-                    <input name='prenom' type='text' value='".$resModifClient['prenom']."'/> 
-                    <input name='adresse' type='text' value='".$resModifClient['adresse']."'/> 
-                    <input name='tel' type='text' value='".$resModifClient['tel']."'/> 
-                    <input name='marque' type='text' value='".$resModifClient['marque']."'/> 
-                    <input name='genre' type='text' value='".$resModifClient['genre']."'/> 
-                    <select name='type'>";
+            echo "<form method='POST' action='#' class='form-modif-clients padding-top-40'>
+                    <input name='civilite' type='text' class='margin-bottom-5' value='".$resModifClient['titre_de_civilite']."'/> 
+                    <input name='nom' type='text' class='margin-bottom-5' value='".$resModifClient['nom']."'/> 
+                    <input name='prenom' type='text' class='margin-bottom-5' value='".$resModifClient['prenom']."'/> 
+                    <input name='adresse' type='text' class='margin-bottom-5' value='".$resModifClient['adresse']."'/> 
+                    <input name='tel' type='text' class='margin-bottom-5' value='".$resModifClient['tel']."'/> 
+                    <input name='marque' type='text' class='margin-bottom-5' value='".$resModifClient['marque']."'/> 
+                    <input name='genre' type='text' class='margin-bottom-5' value='".$resModifClient['genre']."'/> 
+                    <select name='type' class='margin-bottom-5'>";
                     while($resContrats=$reqContrats->fetch(PDO::FETCH_ASSOC)){
                         echo"<option value='".$resContrats['id']."'>".$resContrats['type']."</option>";
                     };

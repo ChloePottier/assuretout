@@ -9,6 +9,7 @@
         <label for="identifiant">Votre mot de passe</label>
         <input id="pwd" name="pwd" type="password" required/>
         <button type="submit" value="submit" style="width: 150px; height: 30px;margin-top:10px;">Se connecter</button>
+        
 </form>
 </body>
 </html>

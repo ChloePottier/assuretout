@@ -74,20 +74,22 @@ session_start ();
         } 
         
           ?>  
+          <h2>Ajouter un client</h2>
         <!-- Formulaire ajouter un client -->
-        <form method='POST' action='#' class='form-ajout-clients'>
+        <form method='POST' action='#' class='form-ajout-clients mx-auto'>
             <input name='civilite' type='text' placeholder='Civilité'/> 
             <input name='nom' type='text' placeholder='Nom' /> 
             <input name='prenom' type='text' placeholder='Prénom' /> 
             <input name='adresse' type='text' placeholder='Adresse' /> 
             <input name='tel' type='text' placeholder='Téléphone' /> 
-            <button type='submit' value='submit' name='ajouter-client' class='btn-client'>Ajouter le client</button>
+            <button type='submit' value='submit' name='ajouter-client' class='btn-client mx-auto'>Ajouter le client</button>
         </form>
+        <h2>Ajouter son véhicule</h2>
         <!-- Formulaire ajouter un véhicule pour un client -->
-        <form method='POST' action='#' class='form-ajout-vehicule'>
+        <form method='POST' action='#' class='form-ajout-vehicule mx-auto'>
             <input name='immatriculation' type='text' placeholder="Plaque d'immatriculation" />
             <select name='client'>
-                <option value=''>--clients--</option><?php
+                <option value='' disabled selected>--clients--</option><?php
                 while($resClients=$reqClients->fetch(PDO::FETCH_ASSOC)){
                     echo"<option value='".$resClients['id']."'>".$resClients['nom']." ".$resClients['prenom']."</option>";
                 };?>
@@ -99,13 +101,13 @@ session_start ();
             <label for="date-1ere-immat">Date de la première immatriculation</label>
             <input name='date-1ere-immat' type='date' /> 
             <select name='type'>
-                <option value=''>--contrats--</option><?php
+                <option value='' disabled selected>--contrats--</option><?php
                 while($resContrats=$reqContrats->fetch(PDO::FETCH_ASSOC)){
                     echo"<option value='".$resContrats['id']."'>".$resContrats['type']."</option>";
                 };?>
 
             </select>
-            <button type='submit' value='submit' name='ajouter-vehicule' class='btn-vehicule'>Ajouter le véhicule</button>
+            <button type='submit' value='submit' name='ajouter-vehicule' class='btn-vehicule mx-auto'>Ajouter le véhicule</button>
         </form>
                 
 <?php

@@ -13,14 +13,13 @@ try {
     print "Erreur !: " . $e->getMessage() . "<br/>";
     die();
 }
+
 //variable du formulaire
 $user = $_POST['user'];
 $pwd = $_POST['pwd'];
 //requete SQL
 $sql = "SELECT 'pseudo', 'pass' FROM connection WHERE pseudo = '".$user."' AND pass = '".$pwd."'"; 
 //exécute la requête SQL 
-$dbh->query($sql);
-//resultat de la requete
 $requete = $dbh->query($sql);
 //recuperation des données dans un tableau
 $res = $requete->fetch(PDO::FETCH_ASSOC);
