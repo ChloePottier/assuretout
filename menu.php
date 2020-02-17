@@ -6,7 +6,7 @@
             <li><a href="contrats.php">Les contrats</a></li>
             <li><a href="clients.php">Les clients</a></li>
             <li><a href="accidents.php">Les accidents</a></li>
-            <li><a href="accidents.php">Intervention expert</a></li>
+            <li><a href="intervention_expert.php">Intervention expert</a></li>
         </ul>
     </nav>
      

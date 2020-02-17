@@ -13,13 +13,15 @@ nav ul li{list-style: none;}
 .border-bottom{border-bottom: solid 1px #000;}
 /* .civilite,.nom_client,.prenom_client,.adresse,.tel_client,.marque_vehicule,.genre_vehicule,.type_contrat{padding-right: 5px;} */
 .civilite{width: 83px;}
-.nom_client{width:200px;}
-.prenom_client{width: 200px;}
+.nom_client,.prenom_client{width:200px;}
+.nom_agent,.prenom_agent{width:100px;}
 .adresse{width: 300px;}
 .tel_client{width: 200px;}
 .marque_vehicule{width: 150px;}
 .genre_vehicule{width: 150px;}
 .type_contrat{width: 120px;}
+.plaques_immatriculation,.responsabilite,.date_accident{width: 110px;}
+.type_accident{width: 200px;}
 .modifier,.supprimer{width:100px; display: flex; justify-content: center; align-items: center;}
 .bold{font-weight: 600;}
 button, .form-ajout-contrat input{margin-left: 20px;}
